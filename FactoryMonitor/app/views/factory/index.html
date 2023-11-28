@@ -1,8 +1,0 @@
-<h1>Total downtime: <%= @factory.total_downtime %> hours</h1>
-<h2>Machines without downtime: <%= @factory.machines_without_downtime.map(&:name).join(', ') %></h2>
-<h2>Relative downtime for each machine:</h2>
-<ul>
-  <% @factory.machines.each do |machine| %>
-    <li><%= machine.name %>: <%= @factory.relative_downtime(machine) %> %</li>
-  <% end %>
-</ul>
