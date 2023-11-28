@@ -1,0 +1,24 @@
+<h1><%= @machine.name %></h1>
+
+<p>
+  <strong>Name:</strong>
+  <%= @machine.name %>
+</p>
+
+<p>
+  <strong>Downtime:</strong>
+  <%= @machine.downtime %> hours
+</p>
+
+<p>
+  <strong>Uptime:</strong>
+  <%= @machine.uptime %> hours
+</p>
+
+<p>
+  <strong>Relative Downtime:</strong>
+  <%= (@machine.downtime.to_f / @machine.uptime) * 100 %>%
+</p>
+
+<%= link_to 'Edit', edit_machine_path(@machine) %> |
+<%= link_to 'Back', machines_path %>
